@@ -22,7 +22,7 @@ app.views.Viewport = Ext.extend(Ext.Panel, {
      * These cards will be other views you have defined
      */
     Ext.apply(app.views, {
-        'Home'
+        
     });
     // Put instances of cards (views) into viewport here
     Ext.apply(this, {
