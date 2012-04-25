@@ -58,7 +58,7 @@ app.views.MapView = Ext.extend(Ext.Panel, {
               hidden: app.hideBack || false,
               handler: function() {
                 console.log('Map-back button clicked');
-                app.views.viewport.setActiveItem(app.views.home, {type: 'slide', direction: 'right'});
+                app.views.viewport.setActiveItem(0, {type: 'slide', direction: 'right'});
               }
             }
         ]
