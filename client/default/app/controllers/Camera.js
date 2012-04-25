@@ -16,16 +16,16 @@ app.controllers.camera = new Ext.Controller({
         var pathToImage = res.uri;
 
         // Change the view
-        app.views.viewport.setActiveItem(app.views.camera);
+        app.views.viewport.setActiveItem(app.views.camera, {type: 'slide', direction: 'left'});
 
         // Update the view
         Ext.getCmp("camera_image").update({
           image: pathToImage
         });
-      }, function (msg, err){
-        Ext.msg.Alert(msg);
       }
-    })
+    }, function (msg, err){
+      Ext.msg.Alert(msg);
+    });
   }
 
 });
