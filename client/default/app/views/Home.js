@@ -56,10 +56,7 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  		width:  100,
 		  		height: 100,
 		  		handler: function() {
-		  	    Ext.dispatch({
-              controller: app.controllers.map,
-              action: 'Show'
-            });
+		  	    app.views.viewport.setActiveItem(app.views.map, 'slide')
 		  		}
 		  	},
 		  	{
