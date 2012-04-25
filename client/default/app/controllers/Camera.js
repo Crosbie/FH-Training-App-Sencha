@@ -22,6 +22,8 @@ app.controllers.camera = new Ext.Controller({
         Ext.getCmp("camera_image").update({
           image: pathToImage
         });
+      }, function (msg, err){
+        Ext.msg.Alert(msg);
       }
     })
   }
