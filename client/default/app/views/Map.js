@@ -53,12 +53,12 @@ app.views.MapView = Ext.extend(Ext.Panel, {
       title: '<img class="logo logoOffset" src="app/images/logo.png" />',
         items: [
             {
-                text: 'Back',
-          ui: 'back',
-          hidden: app.hideBack || false,
-                handler: function() {
-                    app.views.viewport.setActiveItem(app.views.home, {type: 'slide', direction: 'right'});
-                }
+              text: 'Back',
+              ui: 'back',
+              hidden: app.hideBack || false,
+              handler: function() {
+                app.views.viewport.setActiveItem(app.views.home, {type: 'slide', direction: 'right'});
+              }
             }
         ]
     }
