@@ -1,4 +1,18 @@
 /*
+ * Payment
+ */ 
+function payment() {
+  var cardType   = $params.cardType;
+  var cardNumber = $params.cardNumber;
+  var url = "http://www.webservicex.net/CreditCard.asmx/ValidateCardNumber?cardType=" + cardType + "&cardNumber=" + cardNumber;
+
+  return $fh.web({
+    url: url,
+    method: 'GET'
+  });
+}
+
+/*
  * Twitter
  */
 function getTweets() {
@@ -12,20 +26,6 @@ function getTweets() {
     allowSelfSignedCert: true
   });
   return {'data': $fh.parse(response.body).results};
-}
-
-/*
- * Payment
- */ 
-function payment() {
-  var cardType   = $params.cardType;
-  var cardNumber = $params.cardNumber;
-  var url = "http://www.webservicex.net/CreditCard.asmx/ValidateCardNumber?cardType=" + cardType + "&cardNumber=" + cardNumber;
-
-  return $fh.web({
-    url: url,
-    method: 'GET'
-  });
 }
 
 /*
@@ -98,3 +98,8 @@ function getPoints() {
   }
   return response;
 }
+
+exports.payment = payment;
+exports.getTweets = getTweets;
+exports.getCachedPoints = getCachedPoints;
+exports.cachePoints = cachePoints;
