@@ -15,6 +15,11 @@ app.controllers.payment = new Ext.Controller({
       Ext.Msg.alert('Error', 'Card number must be 16 digits.', Ext.emptyFn);
       return;
     }
+    
+    if (typeof cardNumber !== 'number'){
+      Ext.Msg.alert('Error', 'Card number must be numbers', Ext.emptyFn);
+    }
+  
 
     // Show loading spinner
     mask.show();
