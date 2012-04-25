@@ -51,14 +51,14 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  		xtype: 'spacer'
 		  	},
 		  	{
-		  		xtype: 'button',
-		  		cls: 'mapIcon',
-		  		width:  100,
-		  		height: 100,
-		  		handler: function() {
-		  	    app.views.viewport.setActiveItem(app.views.map, 'slide');
-		  		}
-		  	},
+          xtype: 'button',
+          cls: 'mapIcon',
+          width:  100,
+          height: 100,
+          handler: function() {
+              app.views.viewport.setActiveItem(app.views.map, {type: 'slide', direction: 'left'});
+          }
+        },
 		  	{
 		  		xtype: 'spacer'
 		  	},
