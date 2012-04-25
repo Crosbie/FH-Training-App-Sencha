@@ -24,7 +24,7 @@ app.controllers.camera = new Ext.Controller({
         });
       }
     }, function (msg, err){
-      Ext.msg.Alert(msg);
+      Ext.Msg.alert(msg);
     });
   }
 
