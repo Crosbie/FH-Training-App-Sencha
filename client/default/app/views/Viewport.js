@@ -20,7 +20,7 @@ app.views.Viewport = Ext.extend(Ext.Panel, {
       items: [
         app.views.home,
         app.views.map,
-        app.view.twitter
+        app.views.twitter
       ]
     });
     app.views.Viewport.superclass.initComponent.apply(this, arguments);
