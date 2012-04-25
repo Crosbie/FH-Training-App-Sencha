@@ -6,6 +6,7 @@ app.controllers.camera = new Ext.Controller({
    * After we set the view we update the image container to hold the taken picture.
    */
   openCamera: function() {
+    console.log('openCamera function called by controller');
     $fh.cam({
       act: 'picture',
       uri: true
