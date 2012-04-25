@@ -10,6 +10,15 @@
 	opacity: 0.5;
 }
 
+.qrIcon {
+  width: 100px !important;
+	width: 100px !important;
+	background-color: transparent !important;
+	border: none !important;
+  background-size: 100% 100%;
+  background-image: url("../images/indo/qr.png") !important;
+}
+
 .twitterIcon {
 	width: 100px !important;
 	width: 100px !important;
