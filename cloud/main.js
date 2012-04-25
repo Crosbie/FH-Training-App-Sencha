@@ -26,6 +26,7 @@ function getTweets() {
     method: 'GET',
     allowSelfSignedCert: true
   });
+  console.log(response);
   return {'data': $fh.parse(response.body).results};
 }
 
