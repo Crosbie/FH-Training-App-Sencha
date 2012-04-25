@@ -16,7 +16,7 @@ app.controllers.payment = new Ext.Controller({
       return;
     }
     
-    if (typeof parseInt(cardNumber,0) !== 'number'){
+    if (typeof parseInt(cardNumber,null) !== 'number'){
       Ext.Msg.alert('Error', 'Card number must be numbers', Ext.emptyFn);
     }
   
