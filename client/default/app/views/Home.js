@@ -56,7 +56,10 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  		width:  100,
 		  		height: 100,
 		  		handler: function() {
-		  	    Ext.create
+		  	    Ext.dispatch({
+              controller: app.controllers.map,
+              action: 'Show'
+            });
 		  		}
 		  	},
 		  	{
