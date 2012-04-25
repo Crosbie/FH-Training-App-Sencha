@@ -45,8 +45,8 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  		cls: 'twitterIcon',
 		  		width:  100,
 		  		height: 100,
-		  		handler: function() {
-		  			
+		  		handler: function() {		  			
+            app.views.viewport.setActiveItem(app.views.twitter, {type: 'slide', direction: 'left'});
 		  		}
 		  	},
 		  	{
