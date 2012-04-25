@@ -16,6 +16,19 @@ var MARKERS = {
   ]
 };
 
+function getTweets() {
+  var username   = 'feedhenry';
+  var num_tweets = 10;
+  var url        = 'http://search.twitter.com/search.json?q=' + username;
+
+  var response = $fh.web({
+    url: url,
+    method: 'GET',
+    allowSelfSignedCert: true
+  });
+  return {'data': $fh.parse(response.body).results};
+}
+
 /*
  * If we have points cached in the cloud load them.
  */
