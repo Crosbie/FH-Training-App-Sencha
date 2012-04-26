@@ -10,3 +10,9 @@
   -moz-transform-origin: 70px 8px;
   -ms-transform-origin: 70px 8px;
 }
+
+.minute_monitor {
+  background: url(../images/gauge.png) no-repeat;
+  height: 144px !important;
+  width: 285px !important;
+}
