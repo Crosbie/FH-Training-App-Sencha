@@ -31,7 +31,7 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
       type:'vbox',
       align: 'center'
     },
-    defaults:{flex:'1'},
+    //defaults:{flex:'1'},
     items: [{
           xtype: 'button',
           text: 'Submit',
