@@ -2,7 +2,7 @@
   position: absolute;
   width: 77px;
   height: 15px;
-  background: url(needle.png) no-repeat;
+  background: url(../images/needle.png) no-repeat;
   left: 69px;
   top: 110px;
   -webkit-transform: rotate(0deg);
