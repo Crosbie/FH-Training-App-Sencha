@@ -121,11 +121,11 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  	},
 		  	{
 		  		xtype: 'button',
-		  		cls: 'webviewIcon',
+		  		cls: 'qrIcon',
 		  		width:  100,
 		  		height: 100,
 		  		handler: function() {
-		  			app.views.viewport.setActiveItem(app.views.stocks, {type: 'slide', direction: 'left'});
+		  			app.views.viewport.setActiveItem(app.views.barcode, {type: 'slide', direction: 'left'});
 		  		}
 		  	},
 		  	{
