@@ -14,7 +14,7 @@ app.views.Viewport = Ext.extend(Ext.Panel, {
       home:     new app.views.Home(),
       map:      new app.views.MapView(),
       twitter:  new app.views.Twitter(),        
-      payment:  new app.views.Payment(),
+      gauge:    new app.views.Gauge(),
       barcode:  new app.views.Barcode(),
       settings: new app.views.Settings(),
       camera:   new app.views.Camera()
