@@ -34,7 +34,7 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
     //defaults:{flex:'1'},
     items: [{
           xtype: 'button',
-          text: 'Submit',
+          text: 'Scan Code Now',
           handler: function() {
             //Ext.dispatch({
               //controller: app.controllers.barcode,
