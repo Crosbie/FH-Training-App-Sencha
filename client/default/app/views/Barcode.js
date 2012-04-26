@@ -18,7 +18,6 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
           hidden: app.hideBack || false,
   				handler: function() {
   					app.views.viewport.setActiveItem(app.views.home, {type: 'slide', direction: 'right'});
-            app.stores.stocks.removeAll();
   				}
   			}
   		]
