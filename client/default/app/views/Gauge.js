@@ -4,7 +4,7 @@ app.views.Gauge = Ext.extend( Ext.Panel, {
   height: 150,
   layout: {
     type: "vbox",
-    align: "stretch"
+    align: "center"
   },
   
   dockedItems: [
