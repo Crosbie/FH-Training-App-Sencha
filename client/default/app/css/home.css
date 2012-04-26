@@ -22,6 +22,18 @@
   opacity: 0.5;
 }
 
+.gaugeIcon {
+  width: 100px !important;
+  width: 100px !important;
+	background-color: transparent !important;
+	border: none !important;
+  background-size: 100% 100%;
+  background-image: url("../images/indo/gauge.png") !important;
+}
+.gaugeIcon:active, .gaugeIcon:hover {
+  opacity: 0.5;
+}
+
 .twitterIcon {
 	width: 100px !important;
 	width: 100px !important;
