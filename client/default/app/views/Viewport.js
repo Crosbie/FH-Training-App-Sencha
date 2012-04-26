@@ -23,7 +23,7 @@ app.views.Viewport = Ext.extend(Ext.Panel, {
     Ext.apply(this, {
       items: [
         app.views.home,
-        app.views.payment,
+        app.views.barcode,
         app.views.barcode,
         app.views.twitter,
         app.views.map,
