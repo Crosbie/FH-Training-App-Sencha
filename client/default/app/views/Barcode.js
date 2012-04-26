@@ -24,4 +24,43 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
   		]
   	}
   ],
+  
+  items: [{
+    xtype: 'panel',
+    layout:{
+      type:'vbox',
+      align: 'strech'
+    },
+   defaults:{flex:'1'},
+   items: [{
+      xtype: 'form',
+      items: [
+        {
+          xtype: 'fieldset',
+          title: 'Search Stock Info',
+          instructions: 'Enter company name above to perform a mash-up.',
+          defaults: {
+            labelAlign: 'left',
+            labelWidth: '50%'
+          },
+          items: [
+            {
+              xtype: 'textfield',
+              id: 'companyName',
+              name: 'Company Name'
+            },
+          ]
+        },
+        {
+          xtype: 'button',
+          text: 'Submit',
+          handler: function() {
+            Ext.dispatch({
+              controller: app.controllers.stocks,
+              action: 'getStocks'
+            });
+          }
+        }
+      ]
+    }]
 });
