@@ -74,7 +74,7 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  	},
 		  	{
 		  		xtype: 'button',
-		  		cls:  'paymentIcon',
+		  		cls:  'gaugeIcon',
 		  		width:  100,
 		  		height: 100,
 		  		handler: function() {
