@@ -121,7 +121,7 @@ app.views.Home = Ext.extend(Ext.Panel, {
 		  	},
 		  	{
 		  		xtype: 'button',
-		  		cls: 'qrIcon',
+		  		cls: 'barcodeIcon',
 		  		width:  100,
 		  		height: 100,
 		  		handler: function() {
