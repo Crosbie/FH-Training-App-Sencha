@@ -1,0 +1,12 @@
+#needle {
+  position: absolute;
+  width: 77px;
+  height: 15px;
+  background: url(needle.png) no-repeat;
+  left: 69px;
+  top: 110px;
+  -webkit-transform: rotate(0deg);
+  -webkit-transform-origin: 70px 8px;
+  -moz-transform-origin: 70px 8px;
+  -ms-transform-origin: 70px 8px;
+}
