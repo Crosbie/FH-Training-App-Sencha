@@ -35,7 +35,7 @@ app.views.Gauge = Ext.extend( Ext.Panel, {
 		handler: function (){
 			app.views.gauge.rotateTo(90);
 		}
-	}), 
+	}), {xtype: 'spacer'},
 	new Ext.Button({
 		text: 'Reset',
 		width: 200,
