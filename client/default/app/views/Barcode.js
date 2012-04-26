@@ -36,10 +36,10 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
           xtype: 'button',
           text: 'Submit',
           handler: function() {
-            Ext.dispatch({
-              controller: app.controllers.stocks,
-              action: 'getStocks'
-            });
+            //Ext.dispatch({
+              //controller: app.controllers.barcode,
+              //action: 'scanCode'
+            //});
           }
         }
     ],
