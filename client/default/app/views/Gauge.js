@@ -10,7 +10,21 @@ app.views.Gauge = Ext.extend( Ext.Panel, {
   items: [{
     cls: "minute_monitor",
     html: '<div id="needle"></div>'
-  }],
+  },
+  new Ext.Button({
+  	text: 'Check my loyalty',
+		width: 200,
+		handler: function (){
+			Gauge.views.gauge.rotateTo(90);
+		}
+	}), 
+	new Ext.Button({
+		text: 'Reset',
+		width: 200,
+		handler: function (){
+			Gauge.views.gauge.rotateTo(0);
+		}
+	})],
 
   rotateTo: function(deg) {
     var needle = Ext.get('needle').dom;
