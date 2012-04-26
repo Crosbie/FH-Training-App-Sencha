@@ -28,7 +28,7 @@
 	background-color: transparent !important;
 	border: none !important;
   background-size: 100% 100%;
-  background-image: url("../images/indo/gauge.png") !important;
+  background-image: url("../images/icons/gauge.png") !important;
 }
 .gaugeIcon:active, .gaugeIcon:hover {
   opacity: 0.5;
