@@ -32,7 +32,7 @@ app.views.Gauge = Ext.extend(Ext.Panel, {
       align: 'center'
     },
     //defaults:{flex:'1'},
-    items: [{
+    items: [{xtype:'panel', html:'How loyal a reader are you?'},{
           xtype: 'button',
           text: 'Submit',
           handler: function() {
