@@ -29,7 +29,7 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
     xtype: 'panel',
     layout:{
       type:'vbox',
-      align: 'strech'
+      align: 'center'
     },
     defaults:{flex:'1'},
     items: [{
