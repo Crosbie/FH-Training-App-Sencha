@@ -15,14 +15,14 @@ app.views.Gauge = Ext.extend( Ext.Panel, {
   	text: 'Check my loyalty',
 		width: 200,
 		handler: function (){
-			Gauge.views.gauge.rotateTo(90);
+			app.views.gauge.rotateTo(90);
 		}
 	}), 
 	new Ext.Button({
 		text: 'Reset',
 		width: 200,
 		handler: function (){
-			Gauge.views.gauge.rotateTo(0);
+			app.views.gauge.rotateTo(0);
 		}
 	})],
 
