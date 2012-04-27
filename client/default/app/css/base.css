@@ -4,3 +4,8 @@
 .logoOffset {
 	margin-left: 30px;
 }
+
+.x-panel {
+  background-size: 100% 100%
+  background-image: url("../images/indo/logo.png")
+}
