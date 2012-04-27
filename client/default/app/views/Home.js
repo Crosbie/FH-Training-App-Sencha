@@ -1,5 +1,6 @@
 app.views.Home = Ext.extend(Ext.Panel, {
   title: 'Home',
+  cls: 'homepanel',
   iconCls: 'home',
 
   dockedItems: [
