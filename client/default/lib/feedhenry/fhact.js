@@ -72,6 +72,8 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
     
     read: function(operation, callback, scope) {
       
+      console.log('Read:');
+      
       console.log('Operation: ');
       console.log(operation);
       console.log('Callback: ');
