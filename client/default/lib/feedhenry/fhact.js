@@ -35,7 +35,7 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
         
         for (var r=0;r<records.length;r++){
              rawData.push(records[r].data);
-        }        
+        }          
 
 
     var req = {
@@ -57,6 +57,7 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
           return;
         }
         if(typeof callback === 'function'){
+          console.log(callback);
           callback(response.data);
         }
       }, errback || Ext.emptyFn);
