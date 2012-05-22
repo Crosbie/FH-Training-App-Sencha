@@ -69,6 +69,14 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
     },
     
     read: function(operation, callback, scope) {
+      
+      console.log('Operation: ');
+      console.log(operation);
+      console.log('Callback: ');
+      console.log(callback);
+      console.log('Scope: ');
+      console.log(scope);
+      
         var req = {
             'operation' : operation.action, 
                 'sorters' : this.encodeSorters(scope.sorters),
@@ -118,6 +126,13 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
    */
     createRequestCallback: function(operation, callback, scope, syncCallback) {
         
+      console.log('Operation: ');
+      console.log(operation);
+      console.log('Callback: ');
+      console.log(callback);
+      console.log('Scope: ');
+      console.log(scope);
+      
       
       var me = this;
       
