@@ -57,6 +57,7 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
           return;
         }
         if(typeof callback === 'function'){
+          console.log('Callback: ');
           console.log(callback);
           callback(response.data);
         }
