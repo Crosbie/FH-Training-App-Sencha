@@ -26,7 +26,7 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
       console.log(operation);
       console.log('Callback: ');
       console.log(callback);
-      console.log('Scope: ' );
+      console.log('Scope: ');
       console.log(scope);
       
         var rawData = [];
