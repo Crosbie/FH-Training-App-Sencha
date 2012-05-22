@@ -22,8 +22,13 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
 
     create: function(operation, callback, scope) {
 
+      console.log('Operation: ');
+      console.log(operation);
+      console.log('Callback: ');
+      console.log(callback);
+      console.log('Scope: ' );
+      console.log(scope);
       
-
         var rawData = [];
         //save records from operation or records from the previous action (in case of 'localRemote' source)
         var records = (operation.resultSet) ? operation.resultSet.records : operation.records || [];
