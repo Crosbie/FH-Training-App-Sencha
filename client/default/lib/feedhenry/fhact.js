@@ -21,7 +21,9 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
 
 
     create: function(operation, callback, scope) {
-
+      
+      console.log('Create:');
+      
       console.log('Operation: ');
       console.log(operation);
       console.log('Callback: ');
