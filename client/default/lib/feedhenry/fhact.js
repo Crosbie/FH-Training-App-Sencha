@@ -273,5 +273,4 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
 
 });
 
-
-//Ext.data.ProxyMgr.registerType('fhact', Ext.ux.FHActProxy);
+Ext.data.ProxyMgr.registerType('fhact', Ext.ux.FHActProxy);
