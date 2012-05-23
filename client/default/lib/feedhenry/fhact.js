@@ -268,9 +268,116 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
           return min;
       }   
 
+  batch: function(options, /* deprecated */listeners) {
+        var me = this,
+            useBatch = me.getBatchActions(),
+            model = this.getModel(),
+            batch,
+            records;
 
+        if (options.operations === undefined) {
+            // the old-style (operations, listeners) signature was called
+            // so convert to the single options argument syntax
+            options = {
+                operations: options,
+                batch: {
+                    listeners: listeners
+                }
+            };
+
+            // <debug warn>
+            Ext.Logger.deprecate('Passes old-style signature to Proxy.batch (operations, listeners). Please convert to single options argument syntax.');
+            // </debug>
+        }
+
+        if (options.batch) {
+             if (options.batch.isBatch) {
+                 options.batch.setProxy(me);
+             } else {
+                 options.batch.proxy = me;
+             }
+        } else {
+             options.batch = {
+                 proxy: me,
+                 listeners: options.listeners || {}
+             };
+        }
+
+        if (!batch) {
+            batch = new Ext.data.Batch(options.batch);
+        }
+
+        batch.on('complete', Ext.bind(me.onBatchComplete, me, [options], 0));
+
+        Ext.each(me.getBatchOrder().split(','), function(action) {
+             records = options.operations[action];
+             if (records) {
+                 if (useBatch) {
+                     batch.add(new Ext.data.Operation({
+                         action: action,
+                         records: records,
+                         model: model
+                     }));
+                 } else {
+                     Ext.each(records, function(record) {
+                         batch.add(new Ext.data.Operation({
+                             action : action,
+                             records: [record],
+                             model: model
+                         }));
+                     });
+                 }
+             }
+        }, me);
+
+        batch.start();
+        return batch;
+    },
+
+    /**
+      * @private
+      * The internal callback that the proxy uses to call any specified user callbacks after completion of a batch
+      */
+    onBatchComplete: function(batchOptions, batch) {
+         var scope = batchOptions.scope || this;
+
+         if (batch.hasException) {
+             if (Ext.isFunction(batchOptions.failure)) {
+                 Ext.callback(batchOptions.failure, scope, [batch, batchOptions]);
+             }
+         } else if (Ext.isFunction(batchOptions.success)) {
+             Ext.callback(batchOptions.success, scope, [batch, batchOptions]);
+         }
+
+         if (Ext.isFunction(batchOptions.callback)) {
+             Ext.callback(batchOptions.callback, scope, [batch, batchOptions]);
+         }
+    }
+
+    // <deprecated product=touch since=2.0>
+    ,onClassExtended: function(cls, data) {
+        var prototype = this.prototype,
+            defaultConfig = prototype.config,
+            config = data.config || {},
+            key;
+
+        // Convert deprecated properties in application into a config object
+        for (key in defaultConfig) {
+            if (key != "control" && key in data) {
+                config[key] = data[key];
+                delete data[key];
+                // <debug warn>
+                Ext.Logger.warn(key + ' is deprecated as a property directly on the ' + this.$className + ' prototype. Please put it inside the config object.');
+                // </debug>
+            }
+        }
+        data.config = config;
+    }
+    // </deprecated>
+
+      
 
 });
 
 
-Ext.data.ProxyMgr.registerType('fhact', Ext.ux.FHActProxy);
+//Ext.data.ProxyMgr.registerType('fhact', Ext.ux.FHActProxy);
