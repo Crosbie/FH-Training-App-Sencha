@@ -7,7 +7,8 @@ Ext.ux.FHActProxy = Ext.extend(Ext.data.Proxy, {
   
         Ext.ux.FHActProxy.superclass.constructor.apply(this, arguments);
   
-   
+        console.log(this, arguments);
+        console.log('FH ACT constructed');
       
         // if an id is not given, try to use the store's id instead
         this.id = this.id || (this.store ? this.store.storeId : undefined);
