@@ -16,7 +16,7 @@ app.views.Twitter = Ext.extend(Ext.Panel, {
     {
       dock: 'top',
       xtype: 'toolbar',
-      title: '<img class="logo" src="app/images/indo/rewards_black.png" />',
+      title: '<img class="logo" src="app/images/indo/rewards_side.png" />',
       height: 60,
       items: [
         {
