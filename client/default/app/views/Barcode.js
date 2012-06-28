@@ -9,8 +9,9 @@ app.views.Barcode = Ext.extend(Ext.Panel, {
   dockedItems: [
     {
   		dock: 'top',
-  		xtype: 'titlebar',
+  		xtype: 'toolbar',
       title: '<img class="logo" src="app/images/indo/rewards_black.png" />',
+      height: 60,
   		items: [
   			{
   				text: 'Back',
